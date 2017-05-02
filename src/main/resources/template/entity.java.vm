@@ -18,6 +18,9 @@ import lombok.NoArgsConstructor;
 #if(${table.hasDate})
 import java.util.Date;
 #end
+#if(${table.hasDecimal})
+import java.math.BigDecimal;
+#end
 
 /**
  * <p>
