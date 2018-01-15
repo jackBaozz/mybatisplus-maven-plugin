@@ -77,15 +77,16 @@ public enum NamingStrategy {
      * @return
      */
     public static String removePrefix(String name, String prefix) {
-    	if (StringUtils.isBlank(name)) {
+        if (StringUtils.isBlank(name)) {
             return "";
         }
-        int idx = name.indexOf(ConstVal.UNDERLINE);
-        if(prefix != null && !"".equals(prefix.trim())) {
-    		if(name.toLowerCase().matches("^" + prefix.toLowerCase() + ".*")) { // 判断是否有匹配的前缀，然后截取前缀
-    			idx = prefix.length() - 1;
+        int idx = -1;
+        if (prefix != null && !"".equals(prefix.trim())) {
+            idx = name.indexOf(ConstVal.UNDERLINE);
+            if (name.toLowerCase().matches("^" + prefix.toLowerCase() + ".*")) { // 判断是否有匹配的前缀，然后截取前缀
+                idx = prefix.length() - 1;
             }
-    	}
+        }
         if (idx == -1) {
             return name;
         }
