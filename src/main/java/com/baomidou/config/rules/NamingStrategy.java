@@ -103,7 +103,7 @@ public enum NamingStrategy {
     public static String removePrefixAndCamel(String name, String tablePrefix) {
         return underlineToCamel(removePrefix(name, tablePrefix));
     }
-    
+
     /**
      * 实体首字母大写
      *
