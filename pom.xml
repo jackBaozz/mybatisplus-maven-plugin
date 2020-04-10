@@ -4,7 +4,7 @@
 
 	<groupId>com.baomidou</groupId>
 	<artifactId>mybatisplus-maven-plugin</artifactId>
-	<version>1.0</version>
+	<version>1.1</version>
 	<packaging>maven-plugin</packaging>
 
 	<name>mybatisplus-maven-plugin Maven Plugin</name>
